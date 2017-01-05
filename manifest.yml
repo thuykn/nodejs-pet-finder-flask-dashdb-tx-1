@@ -5,13 +5,14 @@ declared-services:
     plan: Entry
 applications:
 # replace the host variable below with your own unique one, as this one can be already taken
-- name: dashdbnodesample
+- name: nodejs-pet-finder-flask-dashdb-tx
   memory: 512M
   instances: 1
   path: .
-  host: dashdbnodesample
+  host: nodejs-pet-finder-flask-dashdb-tx
   framework: node
   command:    node app.js
   buildpack:  sdk-for-nodejs
   services:
-  - dashDB-nodesample
+  - dashDB_tx_1
+
